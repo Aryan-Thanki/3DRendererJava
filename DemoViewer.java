@@ -3,6 +3,8 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.util.List;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -31,6 +33,11 @@ public class DemoViewer {
                 g2.fillRect(0, 0, getWidth(), getHeight());
 
                 //rendering magic will happen here
+                List<Triangle> tris = new ArrayList<>();
+                tris.add(new Triangle(new Vertex(100, 100, 100), 
+                                        new Vertex(-100, -100, 100),
+                                        new Vertex(-100, 100, -100),
+                                        Color.WHITE));
             }
 
         };
@@ -64,4 +71,5 @@ class Triangle{
         this.color = color;
     }
 }
+
 
